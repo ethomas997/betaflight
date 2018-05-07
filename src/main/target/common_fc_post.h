@@ -19,6 +19,13 @@
 
 #pragma once
 
+
+
+#undef VTX_RTC6705
+#undef VTX_RTC6705_OPTIONAL
+
+
+
 // Targets with built-in vtx do not need external vtx
 #if defined(VTX_RTC6705) && !defined(VTX_RTC6705_OPTIONAL)
 #undef VTX_SMARTAUDIO
@@ -64,3 +71,30 @@
 #undef VTX_TRAMP
 #undef VTX_SMARTAUDIO
 #endif
+
+
+#define CMS
+#define USE_MSP_DISPLAYPORT
+
+#define VTX_COMMON
+#define VTX_CONTROL
+#define VTX_SMARTAUDIO
+
+#undef VTX_TRAMP
+
+#undef BLACKBOX
+#undef LED_STRIP
+
+#undef TELEMETRY
+#undef TELEMETRY_FRSKY
+#undef TELEMETRY_HOTT
+#undef TELEMETRY_LTM
+#undef TELEMETRY_SMARTPORT
+
+#undef USE_PPM
+#undef USE_PWM
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_SUMH       // Graupner legacy protocol
+#undef USE_SERIALRX_XBUS       // JR

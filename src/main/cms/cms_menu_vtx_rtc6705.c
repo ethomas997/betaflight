@@ -52,14 +52,14 @@ static OSD_TAB_t entryVtxPower =        {&cmsx_vtxPower, VTX_RTC6705_POWER_COUNT
 
 static void cmsx_Vtx_ConfigRead(void)
 {
-    cmsx_vtxBand = vtxSettingsConfig()->band - 1;
-    cmsx_vtxChannel = vtxSettingsConfig()->channel;
-    cmsx_vtxPower = vtxSettingsConfig()->power;
+//    cmsx_vtxBand = vtxSettingsConfig()->band - 1;
+//    cmsx_vtxChannel = vtxSettingsConfig()->channel;
+//    cmsx_vtxPower = vtxSettingsConfig()->power;
 }
 
 static void cmsx_Vtx_ConfigWriteback(void)
 {
-    vtxSettingsSaveBandChanAndPower(cmsx_vtxBand + 1, cmsx_vtxChannel, cmsx_vtxPower);
+//    vtxSettingsSaveBandChanAndPower(cmsx_vtxBand + 1, cmsx_vtxChannel, cmsx_vtxPower);
 }
 
 static long cmsx_Vtx_onEnter(void)
