@@ -574,6 +574,8 @@ static void saDoDevSetFreq(uint16_t freq)
         switchBuf[6] = CRC8(switchBuf, 6);
 
         saQueueCmd(switchBuf, 7);
+
+        saGetSettings();
     }
 
     saQueueCmd(buf, 7);
