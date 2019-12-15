@@ -193,6 +193,9 @@
 #define USE_VTX_CONTROL
 #define USE_VTX_SMARTAUDIO
 #define USE_VTX_TRAMP
+
+#define VTX_ALB_MOD
+
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 10))

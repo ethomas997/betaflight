@@ -29,7 +29,11 @@
 
 #if defined(USE_VTX_COMMON)
 
+#if defined(VTX_ALB_MOD)
+#define VTX_STRING_BAND_COUNT 6
+#else
 #define VTX_STRING_BAND_COUNT 5
+#endif
 #define VTX_STRING_CHAN_COUNT 8
 
 static const uint16_t vtx58frequencyTable[VTX_STRING_BAND_COUNT][VTX_STRING_CHAN_COUNT] =
@@ -39,6 +43,9 @@ static const uint16_t vtx58frequencyTable[VTX_STRING_BAND_COUNT][VTX_STRING_CHAN
     { 5705, 5685, 5665, 5645, 5885, 5905, 5925, 5945 }, // Boscam E
     { 5740, 5760, 5780, 5800, 5820, 5840, 5860, 5880 }, // FatShark
     { 5658, 5695, 5732, 5769, 5806, 5843, 5880, 5917 }, // RaceBand
+#if defined(VTX_ALB_MOD)
+    { 5362, 5399, 5436, 5473, 5510, 5547, 5584, 5621 }, // LowRace
+#endif
 };
 
 static const char * vtx58BandNames[] = {
@@ -48,9 +55,16 @@ static const char * vtx58BandNames[] = {
     "BOSCAM E",
     "FATSHARK",
     "RACEBAND",
+#if defined(VTX_ALB_MOD)
+    "LOWRACE",
+#endif
 };
 
+#if defined(VTX_ALB_MOD)
+static char const vtx58BandLetter[] = "-ABEFRL";
+#else
 static char const vtx58BandLetter[] = "-ABEFR";
+#endif
 
 static char const * vtx58ChannelNames[] = {
     "-", "1", "2", "3", "4", "5", "6", "7", "8",

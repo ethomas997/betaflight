@@ -26,7 +26,11 @@
 #include "platform.h"
 
 #define VTX_SMARTAUDIO_MIN_BAND 1
+#if defined(VTX_ALB_MOD)
+#define VTX_SMARTAUDIO_MAX_BAND 6
+#else
 #define VTX_SMARTAUDIO_MAX_BAND 5
+#endif
 #define VTX_SMARTAUDIO_MIN_CHANNEL 1
 #define VTX_SMARTAUDIO_MAX_CHANNEL 8
 
